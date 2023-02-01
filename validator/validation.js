@@ -1,4 +1,4 @@
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 
 module.exports = options => {
   return (req, res, next) => {
@@ -27,7 +27,7 @@ module.exports = options => {
       success: false,
       message: 'Invalid data',
       error: result.error.details.map(err => {
-        logger.error(err);
+        console.log(err);
         return err.message;
       })
     });

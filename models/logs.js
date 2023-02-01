@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+var mongoose = require('mongoose');
 
 const logsSchema = new mongoose.Schema(
   {
@@ -25,10 +25,10 @@ const logsSchema = new mongoose.Schema(
     },
 
     request: {
-      type: Schema.Types.Mixed,
+      type: mongoose.Schema.Types.Mixed,
     },
     response: {
-      type: Schema.Types.Mixed,
+      type: mongoose.Schema.Types.Mixed,
     },
   },
   {

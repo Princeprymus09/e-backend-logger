@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-const id = 'sainiprince09';
-const password = 'jmC5sCeAH44vrqx1';
+const id = 'backend';
+const password = 'cobsys-xozqiz-2bycGe';
 
 const connection = async()=>{
-    const URL = `mongodb://${id}:${password}@ac-bpyghfc-shard-00-00.uaguchq.mongodb.net:27017,ac-bpyghfc-shard-00-01.uaguchq.mongodb.net:27017,ac-bpyghfc-shard-00-02.uaguchq.mongodb.net:27017/?ssl=true&replicaSet=atlas-sixjeq-shard-0&authSource=admin&retryWrites=true&w=majority`
+    const URL = `mongodb://${id}:${password}@ac-94xasmj-shard-00-00.eynmgds.mongodb.net:27017,ac-94xasmj-shard-00-01.eynmgds.mongodb.net:27017,ac-94xasmj-shard-00-02.eynmgds.mongodb.net:27017/?ssl=true&replicaSet=atlas-l5jt69-shard-0&authSource=admin&retryWrites=true&w=majority`
     try {
       await mongoose.connect(URL, {useUnifiedTopology:true});
       console.log("data base connected succesfully");
@@ -13,4 +13,3 @@ const connection = async()=>{
     }
 }
 module.exports = connection;
-//something
